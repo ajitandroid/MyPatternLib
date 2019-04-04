@@ -8,6 +8,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    public String name;
+    public String age;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,6 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void MyToast(Context context){
-        Toast.makeText(context, "This is demo toast", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "Name : "+ name+"Age : "+age, Toast.LENGTH_SHORT).show();
     }
 }
