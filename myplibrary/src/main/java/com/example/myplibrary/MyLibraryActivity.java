@@ -6,7 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MyLibraryActivity extends AppCompatActivity {
 
     public String name;
     public String age;
