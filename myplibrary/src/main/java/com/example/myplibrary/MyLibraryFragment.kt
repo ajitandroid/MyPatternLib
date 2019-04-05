@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import kotlinx.android.synthetic.main.fragment_my_library.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -62,7 +63,7 @@ class MyLibraryFragment : Fragment() {
     }
 
     fun dispData(data:String){
-        txtView.text
+        Toast.makeText(activity,data,Toast.LENGTH_SHORT).show()
     }
 
 }
