@@ -32,7 +32,7 @@ class MyLibraryFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         txtView.setOnClickListener {
-            getList()
+            txtView.text = getList()
         }
     }
 
