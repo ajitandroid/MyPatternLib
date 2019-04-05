@@ -64,6 +64,7 @@ class MyLibraryFragment : Fragment() {
 
     fun dispData(data:String){
         Toast.makeText(activity,data,Toast.LENGTH_SHORT).show()
+        txtView.text = data
     }
 
 }
