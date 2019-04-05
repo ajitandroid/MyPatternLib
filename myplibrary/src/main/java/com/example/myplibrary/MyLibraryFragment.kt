@@ -42,7 +42,7 @@ class MyLibraryFragment : Fragment() {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
         val api = retrofit.create(Api::class.java)
-        val call = api.getList()
+        val call = api.getList("jack johnson")
         call.enqueue(object : Callback<AudioSearchModel> {
 
             override fun onResponse(call: Call<AudioSearchModel>?, response: Response<AudioSearchModel>?) {
