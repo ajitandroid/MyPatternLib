@@ -19,10 +19,8 @@ class MyLibraryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_lib)
-
         txtCnt = findViewById(R.id.txtCnt)
         btnClick = findViewById(R.id.btnClick)
-
         btnClick.setOnClickListener { txtCnt.text = Integer.toString(cnt++) }
 
     }
