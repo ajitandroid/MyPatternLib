@@ -32,11 +32,11 @@ class MyLibraryFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         txtView.setOnClickListener {
-            txtView.text = getList()
+            getList()
         }
     }
 
-    fun getList():String {
+    fun getList() {
         var myResponse:String = "NULL"
         val retrofit: Retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)
@@ -50,14 +50,19 @@ class MyLibraryFragment : Fragment() {
                 var usres = response?.body()
                 Log.e("RESPONSE", usres.toString())
                 myResponse = usres.toString()
+                dispData(myResponse)
             }
 
             override fun onFailure(call: Call<AudioSearchModel>?, t: Throwable?) {
                 Log.e("Error", t.toString())
                 myResponse = t.toString()
+                dispData(myResponse)
             }
         })
-        return myResponse
+    }
+
+    fun dispData(data:String){
+        txtView.text
     }
 
 }
