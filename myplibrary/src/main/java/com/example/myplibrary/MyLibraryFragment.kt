@@ -36,7 +36,8 @@ class MyLibraryFragment : Fragment() {
         }
     }
 
-    fun getList() {
+    fun getList():String {
+        var myResponse:String = "NULL"
         val retrofit: Retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -48,13 +49,15 @@ class MyLibraryFragment : Fragment() {
             override fun onResponse(call: Call<AudioSearchModel>?, response: Response<AudioSearchModel>?) {
                 var usres = response?.body()
                 Log.e("RESPONSE", usres.toString())
+                myResponse = usres.toString()
             }
 
             override fun onFailure(call: Call<AudioSearchModel>?, t: Throwable?) {
                 Log.e("Error", t.toString())
+                myResponse = t.toString()
             }
         })
-
+        return myResponse
     }
 
 }
